@@ -1,26 +1,61 @@
-[
-  {
-    "file": "2026-04-flower.jpg",
-    "title": "春天的花",
-    "date": "2026-04",
-    "description": "水彩画"
-  },
-  {
-    "file": "2026-04-sun.jpg",
-    "title": "太阳公公",
-    "date": "2026-04",
-    "description": "蜡笔画"
-  },
-  {
-    "file": "2026-03-house.jpg",
-    "title": "我的家",
-    "date": "2026-03",
-    "description": "彩色铅笔画"
-  },
-  {
-    "file": "2026-03-cat.jpg",
-    "title": "小猫咪",
-    "date": "2026-03",
-    "description": "水彩画"
-  }
-]
+{
+  "yoga": [
+    {
+      "file": "2025-12-9yoga.jpg",
+      "title": "作品 1",
+      "date": "2025-12"
+    },
+    {
+      "file": "2026-4-12_yoga_p1.jpg",
+      "title": "作品 2",
+      "date": "2026-04"
+    },
+    {
+      "file": "2026-4-12_yoga_p2.jpg",
+      "title": "作品 3",
+      "date": "2026-04"
+    },
+    {
+      "file": "2026-4-12_yoga_p3.jpg",
+      "title": "作品 4",
+      "date": "2026-04"
+    },
+    {
+      "file": "2026-4-12-yoga.jpg",
+      "title": "作品 5",
+      "date": "2026-04"
+    },
+    {
+      "file": "2026-4-13-yoga_p1.jpg",
+      "title": "作品 6",
+      "date": "2026-04"
+    },
+    {
+      "file": "2026-4-13-yoga_p2.jpg",
+      "title": "作品 7",
+      "date": "2026-04"
+    },
+    {
+      "file": "2026-4-13-yoga_p3.jpg",
+      "title": "作品 8",
+      "date": "2026-04"
+    },
+    {
+      "file": "2026-4-13-yoga_p4.jpg",
+      "title": "作品 9",
+      "date": "2026-04"
+    },
+    {
+      "file": "2026-yoga.jpg",
+      "title": "作品 10",
+      "date": "2026"
+    }
+  ],
+  "siyu": [
+    {
+      "file": "2026-4-12_Sy.jpg",
+      "title": "作品 1",
+      "date": "2026-04"
+    }
+  ]
+}

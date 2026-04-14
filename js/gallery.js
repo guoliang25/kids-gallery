@@ -2,47 +2,79 @@
   "use strict";
 
   const ARTWORKS_URL = "data/artworks.json";
-  const IMAGE_DIR   = "images/artworks/";
+  const IMAGE_BASE  = "images/artworks/";
 
-  let artworks = [];
+  let allData = {};        // { yoga: [...], siyu: [...] }
+  let currentTab = "yoga";
+  let currentArtworks = [];
   let currentIndex = -1;
 
   // ---- DOM refs ----
-  const gallery        = document.getElementById("gallery");
-  const lightbox       = document.getElementById("lightbox");
-  const lightboxImg    = document.getElementById("lightbox-img");
+  const gallery         = document.getElementById("gallery");
+  const lightbox        = document.getElementById("lightbox");
+  const lightboxImg     = document.getElementById("lightbox-img");
   const lightboxCaption = document.getElementById("lightbox-caption");
 
-  // ---- Load & Render ----
+  // ---- Init ----
   async function init() {
     try {
       const res = await fetch(ARTWORKS_URL);
-      artworks = await res.json();
+      allData = await res.json();
     } catch (err) {
-      gallery.innerHTML = "<p style='text-align:center;color:#999;'>暂无作品，敬请期待！</p>";
+      gallery.innerHTML = '<p class="empty-state">暂无作品，敬请期待！</p>';
       console.error("Failed to load artworks:", err);
       return;
     }
 
-    // Sort by date descending (newest first)
-    artworks.sort((a, b) => b.date.localeCompare(a.date));
-
-    renderGallery();
+    bindTabs();
     bindLightbox();
+    switchTab("yoga");
   }
 
+  // ---- Tabs ----
+  function bindTabs() {
+    document.querySelectorAll(".tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        switchTab(btn.dataset.tab);
+      });
+    });
+  }
+
+  function switchTab(tab) {
+    currentTab = tab;
+
+    // Update active button
+    document.querySelectorAll(".tab").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.tab === tab);
+    });
+
+    // Get artworks for this tab, sort by date descending
+    currentArtworks = (allData[tab] || []).slice();
+    currentArtworks.sort((a, b) => b.date.localeCompare(a.date));
+
+    renderGallery();
+  }
+
+  // ---- Render ----
   function renderGallery() {
+    gallery.innerHTML = "";
+
+    if (currentArtworks.length === 0) {
+      gallery.innerHTML = '<p class="empty-state">暂无作品，敬请期待！</p>';
+      return;
+    }
+
     const fragment = document.createDocumentFragment();
 
-    artworks.forEach((art, index) => {
+    currentArtworks.forEach((art, index) => {
       const card = document.createElement("div");
       card.className = "card";
       card.dataset.index = index;
 
       const img = document.createElement("img");
       img.alt = art.title;
-      img.loading = "lazy";                       // native lazy loading
-      img.src = IMAGE_DIR + art.file;
+      img.loading = "lazy";
+      img.src = IMAGE_BASE + currentTab + "/" + art.file;
 
       const info = document.createElement("div");
       info.className = "card-info";
@@ -77,7 +109,6 @@
     currentIndex = index;
     updateLightboxContent();
     lightbox.hidden = false;
-    // trigger reflow for transition
     void lightbox.offsetHeight;
     lightbox.classList.add("is-visible");
     document.body.style.overflow = "hidden";
@@ -90,49 +121,46 @@
   }
 
   function updateLightboxContent() {
-    const art = artworks[currentIndex];
-    lightboxImg.src = IMAGE_DIR + art.file;
+    const art = currentArtworks[currentIndex];
+    lightboxImg.src = IMAGE_BASE + currentTab + "/" + art.file;
     lightboxImg.alt = art.title;
-    lightboxCaption.textContent = `${art.title}  ·  ${art.date}${art.description ? "  ·  " + art.description : ""}`;
+    lightboxCaption.textContent = art.title + "  ·  " + art.date +
+      (art.description ? "  ·  " + art.description : "");
   }
 
   function navigate(direction) {
-    currentIndex = (currentIndex + direction + artworks.length) % artworks.length;
+    currentIndex = (currentIndex + direction + currentArtworks.length) % currentArtworks.length;
     updateLightboxContent();
   }
 
   function bindLightbox() {
-    // Click card to open
     gallery.addEventListener("click", (e) => {
       const card = e.target.closest(".card");
       if (!card) return;
       openLightbox(Number(card.dataset.index));
     });
 
-    // Close button
     lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
 
-    // Prev / Next
     lightbox.querySelector(".lightbox-prev").addEventListener("click", (e) => {
       e.stopPropagation();
       navigate(-1);
     });
+
     lightbox.querySelector(".lightbox-next").addEventListener("click", (e) => {
       e.stopPropagation();
       navigate(1);
     });
 
-    // Click backdrop to close
     lightbox.addEventListener("click", (e) => {
       if (e.target === lightbox) closeLightbox();
     });
 
-    // Keyboard
     document.addEventListener("keydown", (e) => {
       if (lightbox.hidden) return;
-      if (e.key === "Escape")      closeLightbox();
-      if (e.key === "ArrowLeft")   navigate(-1);
-      if (e.key === "ArrowRight")  navigate(1);
+      if (e.key === "Escape")     closeLightbox();
+      if (e.key === "ArrowLeft")  navigate(-1);
+      if (e.key === "ArrowRight") navigate(1);
     });
   }
 

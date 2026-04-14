@@ -15,7 +15,7 @@ body {
 /* ===== Header ===== */
 .site-header {
   text-align: center;
-  padding: 3rem 1rem 2rem;
+  padding: 3rem 1rem 1.5rem;
 }
 
 .site-header h1 {
@@ -28,6 +28,38 @@ body {
   margin-top: 0.5rem;
   font-size: 1rem;
   color: #888;
+}
+
+/* ===== Tabs ===== */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1rem 1.5rem;
+}
+
+.tab {
+  padding: 0.6rem 1.8rem;
+  border: 2px solid #e0dcd6;
+  border-radius: 999px;
+  background: #fff;
+  color: #666;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab:hover {
+  border-color: #ccc;
+  color: #333;
+}
+
+.tab.active {
+  background: #ff7eb3;
+  border-color: #ff7eb3;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(255, 126, 179, 0.35);
 }
 
 /* ===== Gallery — CSS Columns Masonry ===== */
@@ -78,6 +110,15 @@ body {
   margin-top: 0.3rem;
   font-size: 0.82rem;
   color: #999;
+}
+
+/* ===== Empty state ===== */
+.empty-state {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #bbb;
+  font-size: 1.1rem;
+  column-span: all;
 }
 
 /* ===== Lightbox ===== */
@@ -185,6 +226,15 @@ body {
 
   .site-header h1 {
     font-size: 1.5rem;
+  }
+
+  .tabs {
+    gap: 0.4rem;
+  }
+
+  .tab {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
   }
 
   .lightbox-prev { left: 0.3rem; }
