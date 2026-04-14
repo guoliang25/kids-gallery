@@ -24,7 +24,11 @@ from PIL import Image, ImageDraw, ImageFont
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE  = os.path.join(SCRIPT_DIR, "data", "artworks.json")
 IMG_BASE   = os.path.join(SCRIPT_DIR, "images", "artworks")
-WATERMARK_TEXT = "© Kids Gallery"
+WATERMARK_TEXTS = {
+    "yoga": "© Yoga",
+    "siyu": "© Siyu",
+}
+WATERMARK_DEFAULT = "© Kids Gallery"
 
 def load_data():
     with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -35,8 +39,10 @@ def save_data(data):
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"  Updated {DATA_FILE}")
 
-def add_watermark(src_path, dst_path):
+def add_watermark(src_path, dst_path, text=None):
     """Burn tiled diagonal watermark into image."""
+    if text is None:
+        text = WATERMARK_DEFAULT
     img = Image.open(src_path).convert("RGBA")
     w, h = img.size
 
@@ -50,7 +56,7 @@ def add_watermark(src_path, dst_path):
 
     # Measure text
     tmp_draw = ImageDraw.Draw(Image.new("RGBA", (1, 1)))
-    bbox = tmp_draw.textbbox((0, 0), WATERMARK_TEXT, font=font)
+    bbox = tmp_draw.textbbox((0, 0), text, font=font)
     tw = bbox[2] - bbox[0]
     th = bbox[3] - bbox[1]
 
@@ -63,8 +69,8 @@ def add_watermark(src_path, dst_path):
 
     for y in range(0, canvas_size, step_y):
         for x in range(0, canvas_size, step_x):
-            txt_draw.text((x+1, y+1), WATERMARK_TEXT, font=font, fill=(0, 0, 0, 50))
-            txt_draw.text((x, y), WATERMARK_TEXT, font=font, fill=(255, 255, 255, 80))
+            txt_draw.text((x+1, y+1), text, font=font, fill=(0, 0, 0, 50))
+            txt_draw.text((x, y), text, font=font, fill=(255, 255, 255, 80))
 
     txt_layer = txt_layer.rotate(25, expand=False, center=(canvas_size // 2, canvas_size // 2))
     cx, cy = canvas_size // 2, canvas_size // 2
@@ -73,7 +79,7 @@ def add_watermark(src_path, dst_path):
     result = Image.alpha_composite(img, txt_layer).convert("RGB")
     result.save(dst_path, "JPEG", quality=90)
 
-def pdf_to_images(pdf_path, out_dir, orig_dir):
+def pdf_to_images(pdf_path, out_dir, orig_dir, child=None):
     """Convert PDF to JPGs. Save originals + watermarked. Returns list of filenames."""
     try:
         import fitz
@@ -97,15 +103,14 @@ def pdf_to_images(pdf_path, out_dir, orig_dir):
 
         # Save watermarked
         wm_path = os.path.join(out_dir, fname)
-        add_watermark(orig_path, wm_path)
-
+        add_watermark(orig_path, wm_path, WATERMARK_TEXTS.get(child, WATERMARK_DEFAULT))
         size_kb = os.path.getsize(wm_path) / 1024
         print(f"  {fname} ({pix.width}x{pix.height}, {size_kb:.0f}KB) + original saved")
         outputs.append(fname)
     doc.close()
     return outputs
 
-def copy_image(src_path, out_dir, orig_dir):
+def copy_image(src_path, out_dir, orig_dir, child=None):
     """Copy image: original to _original/, watermarked to out_dir. Returns filename."""
     fname = os.path.basename(src_path).replace(" ", "_")
 
@@ -115,7 +120,7 @@ def copy_image(src_path, out_dir, orig_dir):
 
     # Save watermarked
     wm_path = os.path.join(out_dir, fname)
-    add_watermark(orig_path, wm_path)
+    add_watermark(orig_path, wm_path, WATERMARK_TEXTS.get(child, WATERMARK_DEFAULT))
 
     size_kb = os.path.getsize(wm_path) / 1024
     print(f"  {fname} ({size_kb:.0f}KB) + original saved")
@@ -139,7 +144,7 @@ def process_file(filepath, child, out_dir, orig_dir, title=None, desc=None):
     date = guess_date(os.path.basename(filepath))
 
     if ext == ".pdf":
-        fnames = pdf_to_images(filepath, out_dir, orig_dir)
+        fnames = pdf_to_images(filepath, out_dir, orig_dir, child)
         for i, fname in enumerate(fnames):
             t = title if (title and len(fnames) == 1) else f"{title or os.path.splitext(os.path.basename(filepath))[0]} p{i+1}" if len(fnames) > 1 else (title or os.path.splitext(os.path.basename(filepath))[0])
             entries.append({
@@ -149,7 +154,7 @@ def process_file(filepath, child, out_dir, orig_dir, title=None, desc=None):
                 "description": desc or ""
             })
     elif ext in (".jpg", ".jpeg", ".png", ".webp", ".heic"):
-        fname = copy_image(filepath, out_dir, orig_dir)
+        fname = copy_image(filepath, out_dir, orig_dir, child)
         entries.append({
             "file": fname,
             "title": title or os.path.splitext(os.path.basename(filepath))[0],
