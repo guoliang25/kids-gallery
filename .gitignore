@@ -1,0 +1,5 @@
+# Keep original (unwatermarked) images local only
+images/artworks/*/_original/
+
+# macOS
+.DS_Store
