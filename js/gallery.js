@@ -19,6 +19,12 @@
   const btnPrev         = lightbox.querySelector(".lightbox-prev");
   const btnNext         = lightbox.querySelector(".lightbox-next");
 
+  // ---- Helpers ----
+  // Each image can be a string "file.jpg" or an object {file, caption}
+  function getFile(img)    { return typeof img === "string" ? img : img.file; }
+  function getCaption(img) { return typeof img === "string" ? ""  : (img.caption || ""); }
+  function imgSrc(img)     { return IMAGE_BASE + currentTab + "/" + getFile(img); }
+
   // ---- Init ----
   async function init() {
     try {
@@ -51,10 +57,6 @@
   }
 
   // ---- Render ----
-  function imgSrc(file) {
-    return IMAGE_BASE + currentTab + "/" + file;
-  }
-
   function renderGallery() {
     gallery.innerHTML = "";
 
@@ -73,7 +75,6 @@
       const images = series.images;
 
       if (images.length === 1) {
-        // Single image — just show it
         const img = document.createElement("img");
         img.alt = series.title;
         img.loading = "lazy";
@@ -81,11 +82,8 @@
         img.dataset.imgIdx = "0";
         card.appendChild(img);
       } else {
-        // Multi-image — grid preview
         const grid = document.createElement("div");
         grid.className = "card-grid";
-
-        // Choose grid class: 2, 3, or 4 (show max 4 thumbs)
         const count = Math.min(images.length, 4);
         grid.classList.add("grid-" + count);
 
@@ -101,7 +99,6 @@
         card.appendChild(grid);
       }
 
-      // Info
       const info = document.createElement("div");
       info.className = "card-info";
 
@@ -149,12 +146,14 @@
   function updateLightbox() {
     const series = currentSeries[seriesIndex];
     const images = series.images;
+    const current = images[imageIndex];
 
-    lightboxImg.src = imgSrc(images[imageIndex]);
+    lightboxImg.src = imgSrc(current);
     lightboxImg.alt = series.title;
 
-    lightboxCaption.textContent = series.title +
-      (series.description ? "  ·  " + series.description : "");
+    // Caption: show per-image caption, fall back to series description
+    const caption = getCaption(current) || series.description || "";
+    lightboxCaption.textContent = caption;
 
     if (images.length > 1) {
       lightboxCounter.textContent = (imageIndex + 1) + " / " + images.length;
@@ -176,16 +175,12 @@
   }
 
   function bindLightbox() {
-    // Click card or grid image to open — detect which image was clicked
     gallery.addEventListener("click", (e) => {
       const card = e.target.closest(".card");
       if (!card) return;
       const sIdx = Number(card.dataset.series);
-
-      // If clicked on a specific image inside grid, open at that index
       const clickedImg = e.target.closest("img[data-img-idx]");
       const imgIdx = clickedImg ? Number(clickedImg.dataset.imgIdx) : 0;
-
       openLightbox(sIdx, imgIdx);
     });
 

@@ -4,31 +4,46 @@
       "title": "Clock & Turtle",
       "date": "2025-12",
       "description": "Handmade clock craft with a cute clay turtle",
-      "images": ["2025-12-9yoga.jpg"]
+      "images": [
+        { "file": "2025-12-9yoga.jpg", "caption": "A purple clock with numbers and a green clay turtle" }
+      ]
     },
     {
       "title": "Backpack Collection",
       "date": "2026-04",
-      "description": "Three creative bags — colorful, green, and blue",
-      "images": ["2026-4-12_yoga_p1.jpg", "2026-4-12_yoga_p2.jpg", "2026-4-12_yoga_p3.jpg"]
+      "description": "Three creative bags in bold marker strokes",
+      "images": [
+        { "file": "2026-4-12_yoga_p1.jpg", "caption": "A castle sitting on top of a yellow backpack" },
+        { "file": "2026-4-12_yoga_p2.jpg", "caption": "A green backpack with cool sunglasses" },
+        { "file": "2026-4-12_yoga_p3.jpg", "caption": "A blue suitcase rolling on a crosshatch track" }
+      ]
     },
     {
       "title": "Stripy Snake House",
       "date": "2026-04",
       "description": "A striped snake curling around a cozy little house",
-      "images": ["2026-4-12-yoga.jpg"]
+      "images": [
+        { "file": "2026-4-12-yoga.jpg", "caption": "A colorful striped snake wrapping around an orange house" }
+      ]
     },
     {
       "title": "Chalk Board Series",
       "date": "2026-04",
-      "description": "Chalk drawings on blackboard — night sky, characters, and houses",
-      "images": ["2026-4-13-yoga_p1.jpg", "2026-4-13-yoga_p2.jpg", "2026-4-13-yoga_p3.jpg", "2026-4-13-yoga_p4.jpg"]
+      "description": "Chalk drawings on blackboard — night scenes and houses",
+      "images": [
+        { "file": "2026-4-13-yoga_p1.jpg", "caption": "Vehicles driving through a starry night" },
+        { "file": "2026-4-13-yoga_p2.jpg", "caption": "A wild-haired character holding scissors" },
+        { "file": "2026-4-13-yoga_p3.jpg", "caption": "A big house with a tiny person standing on top" },
+        { "file": "2026-4-13-yoga_p4.jpg", "caption": "Three buildings side by side — a neighborhood view" }
+      ]
     },
     {
       "title": "Hermit Crab",
       "date": "2026",
       "description": "Bold oil painting — a fierce hermit crab in red and black",
-      "images": ["2026-yoga.jpg"]
+      "images": [
+        { "file": "2026-yoga.jpg", "caption": "A fierce red hermit crab in thick oil paint" }
+      ]
     }
   ],
   "siyu": [
@@ -36,7 +51,9 @@
       "title": "Circles Everywhere",
       "date": "2026-04",
       "description": "Playful loops and shapes in purple, pink, and blue",
-      "images": ["2026-4-12_Sy.jpg"]
+      "images": [
+        { "file": "2026-4-12_Sy.jpg", "caption": "Colorful circles and loops dancing across the page" }
+      ]
     }
   ]
 }
