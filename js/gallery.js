@@ -36,6 +36,7 @@
     }
     bindTabs();
     bindLightbox();
+    bindProtection();
     switchTab("yoga");
   }
 
@@ -98,6 +99,11 @@
 
         card.appendChild(grid);
       }
+
+      // Watermark overlay
+      const watermark = document.createElement("div");
+      watermark.className = "card-watermark";
+      card.appendChild(watermark);
 
       const info = document.createElement("div");
       info.className = "card-info";
@@ -197,6 +203,23 @@
       if (e.key === "Escape")     closeLightbox();
       if (e.key === "ArrowLeft")  navigate(-1);
       if (e.key === "ArrowRight") navigate(1);
+    });
+  }
+
+  // ---- Image protection ----
+  function bindProtection() {
+    // Disable right-click on images
+    document.addEventListener("contextmenu", (e) => {
+      if (e.target.tagName === "IMG" || e.target.closest(".card") || e.target.closest(".lightbox")) {
+        e.preventDefault();
+      }
+    });
+
+    // Disable drag on images
+    document.addEventListener("dragstart", (e) => {
+      if (e.target.tagName === "IMG") {
+        e.preventDefault();
+      }
     });
   }
 
