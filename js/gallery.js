@@ -4,11 +4,11 @@
   const ARTWORKS_URL = "data/artworks.json";
   const IMAGE_BASE   = "images/artworks/";
 
-  let allData = {};          // { yoga: [...], siyu: [...] }
+  let allData = {};
   let currentTab = "yoga";
-  let currentSeries = [];    // array of series for the active tab
-  let seriesIndex = -1;      // which series is open in lightbox
-  let imageIndex  = 0;       // which image within that series
+  let currentSeries = [];
+  let seriesIndex = -1;
+  let imageIndex  = 0;
 
   // ---- DOM refs ----
   const gallery         = document.getElementById("gallery");
@@ -26,7 +26,6 @@
       allData = await res.json();
     } catch (err) {
       gallery.innerHTML = '<p class="empty-state">No artworks yet — stay tuned!</p>';
-      console.error("Failed to load artworks:", err);
       return;
     }
     bindTabs();
@@ -52,6 +51,10 @@
   }
 
   // ---- Render ----
+  function imgSrc(file) {
+    return IMAGE_BASE + currentTab + "/" + file;
+  }
+
   function renderGallery() {
     gallery.innerHTML = "";
 
@@ -67,22 +70,38 @@
       card.className = "card";
       card.dataset.series = idx;
 
-      // Use the first image as cover
-      const img = document.createElement("img");
-      img.alt = series.title;
-      img.loading = "lazy";
-      img.src = IMAGE_BASE + currentTab + "/" + series.images[0];
+      const images = series.images;
 
-      card.appendChild(img);
+      if (images.length === 1) {
+        // Single image — just show it
+        const img = document.createElement("img");
+        img.alt = series.title;
+        img.loading = "lazy";
+        img.src = imgSrc(images[0]);
+        img.dataset.imgIdx = "0";
+        card.appendChild(img);
+      } else {
+        // Multi-image — grid preview
+        const grid = document.createElement("div");
+        grid.className = "card-grid";
 
-      // Series badge (e.g. "4 pics")
-      if (series.images.length > 1) {
-        const badge = document.createElement("span");
-        badge.className = "card-badge";
-        badge.textContent = series.images.length + " pics";
-        card.appendChild(badge);
+        // Choose grid class: 2, 3, or 4 (show max 4 thumbs)
+        const count = Math.min(images.length, 4);
+        grid.classList.add("grid-" + count);
+
+        for (let i = 0; i < count; i++) {
+          const img = document.createElement("img");
+          img.alt = series.title + " " + (i + 1);
+          img.loading = "lazy";
+          img.src = imgSrc(images[i]);
+          img.dataset.imgIdx = String(i);
+          grid.appendChild(img);
+        }
+
+        card.appendChild(grid);
       }
 
+      // Info
       const info = document.createElement("div");
       info.className = "card-info";
 
@@ -131,13 +150,12 @@
     const series = currentSeries[seriesIndex];
     const images = series.images;
 
-    lightboxImg.src = IMAGE_BASE + currentTab + "/" + images[imageIndex];
+    lightboxImg.src = imgSrc(images[imageIndex]);
     lightboxImg.alt = series.title;
 
     lightboxCaption.textContent = series.title +
       (series.description ? "  ·  " + series.description : "");
 
-    // Counter (e.g. "2 / 4")
     if (images.length > 1) {
       lightboxCounter.textContent = (imageIndex + 1) + " / " + images.length;
       lightboxCounter.style.display = "";
@@ -146,7 +164,6 @@
       lightboxCounter.style.display = "none";
     }
 
-    // Show/hide arrows
     const multi = images.length > 1;
     btnPrev.classList.toggle("is-hidden", !multi);
     btnNext.classList.toggle("is-hidden", !multi);
@@ -159,24 +176,27 @@
   }
 
   function bindLightbox() {
-    // Click card to open
+    // Click card or grid image to open — detect which image was clicked
     gallery.addEventListener("click", (e) => {
       const card = e.target.closest(".card");
       if (!card) return;
-      openLightbox(Number(card.dataset.series));
+      const sIdx = Number(card.dataset.series);
+
+      // If clicked on a specific image inside grid, open at that index
+      const clickedImg = e.target.closest("img[data-img-idx]");
+      const imgIdx = clickedImg ? Number(clickedImg.dataset.imgIdx) : 0;
+
+      openLightbox(sIdx, imgIdx);
     });
 
     lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
-
     btnPrev.addEventListener("click", (e) => { e.stopPropagation(); navigate(-1); });
     btnNext.addEventListener("click", (e) => { e.stopPropagation(); navigate(1);  });
 
-    // Click backdrop to close
     lightbox.addEventListener("click", (e) => {
       if (e.target === lightbox) closeLightbox();
     });
 
-    // Keyboard
     document.addEventListener("keydown", (e) => {
       if (lightbox.hidden) return;
       if (e.key === "Escape")     closeLightbox();
@@ -185,6 +205,5 @@
     });
   }
 
-  // ---- Start ----
   document.addEventListener("DOMContentLoaded", init);
 })();
