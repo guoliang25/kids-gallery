@@ -204,6 +204,26 @@
       if (e.key === "ArrowLeft")  navigate(-1);
       if (e.key === "ArrowRight") navigate(1);
     });
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    lightbox.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    lightbox.addEventListener("touchend", (e) => {
+      const dx = e.changedTouches[0].screenX - touchStartX;
+      const dy = e.changedTouches[0].screenY - touchStartY;
+
+      // Only trigger if horizontal swipe is dominant and long enough
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        if (dx < 0) navigate(1);   // swipe left → next
+        else        navigate(-1);   // swipe right → prev
+      }
+    }, { passive: true });
   }
 
   // ---- Image protection ----
