@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoga's Gallery — Kids Art Gallery</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-link">← Home</a>
+    <span class="nav-title">🧑‍🎨 Yoga's Gallery</span>
+    <a href="siyu.html" class="nav-link">Siyu →</a>
+  </nav>
+
+  <main id="gallery" class="gallery" data-child="yoga"></main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous">&#10094;</button>
+    <button class="lightbox-next" aria-label="Next">&#10095;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+      <div id="lightbox-counter" class="lightbox-counter"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p class="copyright">&copy; 2025&ndash;2026 Yoga & Siyu. All rights reserved.</p>
+    <p class="copyright-notice">All artworks on this site are original creations and protected by copyright law. Unauthorized reproduction, distribution, or use is strictly prohibited.</p>
+    <p>Made with ❤️</p>
+  </footer>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>

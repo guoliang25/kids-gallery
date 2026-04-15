@@ -4,11 +4,10 @@
   const ARTWORKS_URL = "data/artworks.json";
   const IMAGE_BASE   = "images/artworks/";
 
-  let allData = {};
-  let currentTab = "yoga";
+  let currentChild  = "yoga";
   let currentSeries = [];
-  let seriesIndex = -1;
-  let imageIndex  = 0;
+  let seriesIndex   = -1;
+  let imageIndex    = 0;
 
   // ---- DOM refs ----
   const gallery         = document.getElementById("gallery");
@@ -20,13 +19,16 @@
   const btnNext         = lightbox.querySelector(".lightbox-next");
 
   // ---- Helpers ----
-  // Each image can be a string "file.jpg" or an object {file, caption}
   function getFile(img)    { return typeof img === "string" ? img : img.file; }
   function getCaption(img) { return typeof img === "string" ? ""  : (img.caption || ""); }
-  function imgSrc(img)     { return IMAGE_BASE + currentTab + "/" + getFile(img); }
+  function imgSrc(img)     { return IMAGE_BASE + currentChild + "/" + getFile(img); }
 
   // ---- Init ----
   async function init() {
+    // Read which child's gallery to show from the data attribute
+    currentChild = gallery.dataset.child || "yoga";
+
+    let allData;
     try {
       const res = await fetch(ARTWORKS_URL);
       allData = await res.json();
@@ -34,27 +36,13 @@
       gallery.innerHTML = '<p class="empty-state">No artworks yet — stay tuned!</p>';
       return;
     }
-    bindTabs();
+
+    currentSeries = (allData[currentChild] || []).slice();
+    currentSeries.sort((a, b) => b.date.localeCompare(a.date));
+
+    renderGallery();
     bindLightbox();
     bindProtection();
-    switchTab("yoga");
-  }
-
-  // ---- Tabs ----
-  function bindTabs() {
-    document.querySelectorAll(".tab").forEach(btn => {
-      btn.addEventListener("click", () => switchTab(btn.dataset.tab));
-    });
-  }
-
-  function switchTab(tab) {
-    currentTab = tab;
-    document.querySelectorAll(".tab").forEach(btn => {
-      btn.classList.toggle("active", btn.dataset.tab === tab);
-    });
-    currentSeries = (allData[tab] || []).slice();
-    currentSeries.sort((a, b) => b.date.localeCompare(a.date));
-    renderGallery();
   }
 
   // ---- Render ----
@@ -152,7 +140,6 @@
     lightboxImg.src = imgSrc(current);
     lightboxImg.alt = series.title;
 
-    // Caption: show per-image caption, fall back to series description
     const caption = getCaption(current) || series.description || "";
     lightboxCaption.textContent = caption;
 
@@ -216,24 +203,21 @@
       const dy = e.changedTouches[0].screenY - touchStartY;
       const dt = Date.now() - touchStartTime;
 
-      // Require: >80px horizontal, clearly horizontal (3x), and within 500ms
       if (Math.abs(dx) > 80 && Math.abs(dx) > Math.abs(dy) * 3 && dt < 500) {
-        if (dx < 0) navigate(1);   // swipe left → next
-        else        navigate(-1);   // swipe right → prev
+        if (dx < 0) navigate(1);
+        else        navigate(-1);
       }
     }, { passive: true });
   }
 
   // ---- Image protection ----
   function bindProtection() {
-    // Disable right-click on images
     document.addEventListener("contextmenu", (e) => {
       if (e.target.tagName === "IMG" || e.target.closest(".card") || e.target.closest(".lightbox")) {
         e.preventDefault();
       }
     });
 
-    // Disable drag on images
     document.addEventListener("dragstart", (e) => {
       if (e.target.tagName === "IMG") {
         e.preventDefault();

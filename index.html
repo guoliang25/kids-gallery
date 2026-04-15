@@ -15,31 +15,28 @@
     <p class="subtitle">Every piece tells a story</p>
   </header>
 
-  <nav class="tabs">
-    <button class="tab active" data-tab="yoga">🧑‍🎨 Yoga</button>
-    <button class="tab" data-tab="siyu">👧 Siyu</button>
-  </nav>
-
-  <main id="gallery" class="gallery"></main>
-
-  <!-- 灯箱 -->
-  <div id="lightbox" class="lightbox" hidden>
-    <button class="lightbox-close" aria-label="Close">&times;</button>
-    <button class="lightbox-prev" aria-label="Previous">&#10094;</button>
-    <button class="lightbox-next" aria-label="Next">&#10095;</button>
-    <div class="lightbox-content">
-      <img id="lightbox-img" src="" alt="">
-      <div id="lightbox-caption" class="lightbox-caption"></div>
-      <div id="lightbox-counter" class="lightbox-counter"></div>
-    </div>
-  </div>
+  <section class="home-grid">
+    <a href="yoga.html" class="home-card">
+      <img src="images/artworks/yoga/2026-yoga.jpg" alt="Yoga's artwork">
+      <div class="home-card-overlay">
+        <h2>🧑‍🎨 Yoga</h2>
+        <p>View gallery →</p>
+      </div>
+    </a>
+    <a href="siyu.html" class="home-card">
+      <img src="images/artworks/siyu/2026-4-12_Sy.jpg" alt="Siyu's artwork">
+      <div class="home-card-overlay">
+        <h2>👧 Siyu</h2>
+        <p>View gallery →</p>
+      </div>
+    </a>
+  </section>
 
   <footer class="site-footer">
-    <p class="copyright">© 2025–2026 Yoga & Siyu. All rights reserved.</p>
+    <p class="copyright">&copy; 2025&ndash;2026 Yoga & Siyu. All rights reserved.</p>
     <p class="copyright-notice">All artworks on this site are original creations and protected by copyright law. Unauthorized reproduction, distribution, or use is strictly prohibited.</p>
     <p>Made with ❤️</p>
   </footer>
 
-  <script src="js/gallery.js"></script>
 </body>
 </html>

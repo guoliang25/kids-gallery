@@ -30,44 +30,97 @@ body {
   color: #888;
 }
 
-/* ===== Tabs ===== */
-.tabs {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 0 1rem 2rem;
+/* ===== Home Grid (index.html) ===== */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 1rem auto 3rem;
+  padding: 0 1.5rem;
 }
 
-.tab {
-  padding: 0.65rem 2rem;
-  border: none;
-  border-radius: 10px;
-  background: #f0eeeb;
-  color: #777;
+.home-card {
+  position: relative;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+}
+
+.home-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.home-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.home-card-overlay h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.home-card-overlay p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* ===== Nav Bar (gallery pages) ===== */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-bar .nav-link {
+  text-decoration: none;
+  color: #555;
   font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  position: relative;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
 }
 
-.tab:hover {
-  background: #e8e5e0;
-  color: #444;
+.nav-bar .nav-link:hover {
+  background: #f0eeeb;
+  color: #2c2c2c;
 }
 
-.tab.active {
-  background: #2c2c2c;
-  color: #fff;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+.nav-bar .nav-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c2c2c;
 }
 
 /* ===== Gallery — CSS Columns Masonry ===== */
 .gallery {
   column-count: 3;
   column-gap: 1.2rem;
-  padding: 0 2rem 3rem;
+  padding: 1.5rem 2rem 3rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -295,27 +348,41 @@ body {
 @media (max-width: 900px) {
   .gallery {
     column-count: 2;
-    padding: 0 1.2rem 2rem;
+    padding: 1rem 1.2rem 2rem;
   }
 }
 
 @media (max-width: 540px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 1.2rem;
+  }
+
+  .home-card-overlay h2 {
+    font-size: 1.3rem;
+  }
+
   .gallery {
     column-count: 1;
-    padding: 0 1rem 2rem;
+    padding: 0.5rem 1rem 2rem;
   }
 
   .site-header h1 {
     font-size: 1.5rem;
   }
 
-  .tabs {
-    gap: 0.4rem;
+  .nav-bar {
+    padding: 0.8rem 1rem;
   }
 
-  .tab {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.9rem;
+  .nav-bar .nav-title {
+    font-size: 1rem;
+  }
+
+  .nav-bar .nav-link {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
   }
 
   .lightbox-prev { left: 0.3rem; }
