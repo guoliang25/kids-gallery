@@ -5,7 +5,10 @@
       "date": "2025-12",
       "description": "Handmade clock craft with a cute clay turtle",
       "images": [
-        { "file": "2025-12-9yoga.jpg", "caption": "A purple clock with numbers and a green clay turtle" }
+        {
+          "file": "2025-12-9yoga.jpg",
+          "caption": "A purple clock with numbers and a green clay turtle"
+        }
       ]
     },
     {
@@ -13,9 +16,18 @@
       "date": "2026-04",
       "description": "Three creative bags in bold marker strokes",
       "images": [
-        { "file": "2026-4-12_yoga_p1.jpg", "caption": "A castle sitting on top of a yellow backpack" },
-        { "file": "2026-4-12_yoga_p2.jpg", "caption": "A green backpack with cool sunglasses" },
-        { "file": "2026-4-12_yoga_p3.jpg", "caption": "A blue suitcase rolling on a crosshatch track" }
+        {
+          "file": "2026-4-12_yoga_p1.jpg",
+          "caption": "A castle sitting on top of a yellow backpack"
+        },
+        {
+          "file": "2026-4-12_yoga_p2.jpg",
+          "caption": "A green backpack with cool sunglasses"
+        },
+        {
+          "file": "2026-4-12_yoga_p3.jpg",
+          "caption": "A blue suitcase rolling on a crosshatch track"
+        }
       ]
     },
     {
@@ -23,7 +35,10 @@
       "date": "2026-04",
       "description": "A striped snake curling around a cozy little house",
       "images": [
-        { "file": "2026-4-12-yoga.jpg", "caption": "A colorful striped snake wrapping around an orange house" }
+        {
+          "file": "2026-4-12-yoga.jpg",
+          "caption": "A colorful striped snake wrapping around an orange house"
+        }
       ]
     },
     {
@@ -31,10 +46,22 @@
       "date": "2026-04",
       "description": "Chalk drawings on blackboard — night scenes and houses",
       "images": [
-        { "file": "2026-4-13-yoga_p1.jpg", "caption": "Vehicles driving through a starry night" },
-        { "file": "2026-4-13-yoga_p2.jpg", "caption": "A wild-haired character holding scissors" },
-        { "file": "2026-4-13-yoga_p3.jpg", "caption": "A big house with a tiny person standing on top" },
-        { "file": "2026-4-13-yoga_p4.jpg", "caption": "Three buildings side by side — a neighborhood view" }
+        {
+          "file": "2026-4-13-yoga_p1.jpg",
+          "caption": "Vehicles driving through a starry night"
+        },
+        {
+          "file": "2026-4-13-yoga_p2.jpg",
+          "caption": "A wild-haired character holding scissors"
+        },
+        {
+          "file": "2026-4-13-yoga_p3.jpg",
+          "caption": "A big house with a tiny person standing on top"
+        },
+        {
+          "file": "2026-4-13-yoga_p4.jpg",
+          "caption": "Three buildings side by side — a neighborhood view"
+        }
       ]
     },
     {
@@ -42,7 +69,21 @@
       "date": "2026",
       "description": "Bold oil painting — a fierce hermit crab in red and black",
       "images": [
-        { "file": "2026-yoga.jpg", "caption": "A fierce red hermit crab in thick oil paint" }
+        {
+          "file": "2026-yoga.jpg",
+          "caption": "A fierce red hermit crab in thick oil paint"
+        }
+      ]
+    },
+    {
+      "title": "Chalk Friends",
+      "date": "2026-04",
+      "description": "Two smiling chalk figures standing under swirling skies",
+      "images": [
+        {
+          "file": "2026-04-14_Yoga黑板画.jpg",
+          "caption": "Two big chalk friends — one in cool blue stripes, the other in playful pink — grinning under wild swirling skies with tiny flowers floating between them"
+        }
       ]
     }
   ],
@@ -52,7 +93,10 @@
       "date": "2026-04",
       "description": "Playful loops and shapes in purple, pink, and blue",
       "images": [
-        { "file": "2026-4-12_Sy.jpg", "caption": "Colorful circles and loops dancing across the page" }
+        {
+          "file": "2026-4-12_Sy.jpg",
+          "caption": "Colorful circles and loops dancing across the page"
+        }
       ]
     }
   ]
