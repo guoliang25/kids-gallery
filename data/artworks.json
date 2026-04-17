@@ -1,48 +1,18 @@
 [
   {
-    "title": "Clock & Turtle",
-    "date": "2025-12",
-    "description": "Handmade clock craft with a cute clay turtle",
+    "title": "Chalk Friends",
+    "date": "2026-04-14",
+    "description": "Two smiling chalk figures standing under swirling skies",
     "images": [
       {
-        "file": "2025-12-9yoga.jpg",
-        "caption": "A purple clock with numbers and a green clay turtle"
-      }
-    ]
-  },
-  {
-    "title": "Backpack Collection",
-    "date": "2026-04",
-    "description": "Three creative bags in bold marker strokes",
-    "images": [
-      {
-        "file": "2026-4-12_yoga_p1.jpg",
-        "caption": "A castle sitting on top of a yellow backpack"
-      },
-      {
-        "file": "2026-4-12_yoga_p2.jpg",
-        "caption": "A green backpack with cool sunglasses"
-      },
-      {
-        "file": "2026-4-12_yoga_p3.jpg",
-        "caption": "A blue suitcase rolling on a crosshatch track"
-      }
-    ]
-  },
-  {
-    "title": "Stripy Snake House",
-    "date": "2026-04",
-    "description": "A striped snake curling around a cozy little house",
-    "images": [
-      {
-        "file": "2026-4-12-yoga.jpg",
-        "caption": "A colorful striped snake wrapping around an orange house"
+        "file": "2026-04-14_Yoga黑板画.jpg",
+        "caption": "Two big chalk friends — one in cool blue stripes, the other in playful pink — grinning under wild swirling skies with tiny flowers floating between them"
       }
     ]
   },
   {
     "title": "Chalk Board Series",
-    "date": "2026-04",
+    "date": "2026-04-13",
     "description": "Chalk drawings on blackboard — night scenes and houses",
     "images": [
       {
@@ -64,8 +34,38 @@
     ]
   },
   {
+    "title": "Backpack Collection",
+    "date": "2026-04-12",
+    "description": "Three creative bags in bold marker strokes",
+    "images": [
+      {
+        "file": "2026-4-12_yoga_p1.jpg",
+        "caption": "A castle sitting on top of a yellow backpack"
+      },
+      {
+        "file": "2026-4-12_yoga_p2.jpg",
+        "caption": "A green backpack with cool sunglasses"
+      },
+      {
+        "file": "2026-4-12_yoga_p3.jpg",
+        "caption": "A blue suitcase rolling on a crosshatch track"
+      }
+    ]
+  },
+  {
+    "title": "Stripy Snake House",
+    "date": "2026-04-12",
+    "description": "A striped snake curling around a cozy little house",
+    "images": [
+      {
+        "file": "2026-4-12-yoga.jpg",
+        "caption": "A colorful striped snake wrapping around an orange house"
+      }
+    ]
+  },
+  {
     "title": "Hermit Crab",
-    "date": "2026",
+    "date": "2026-01-01",
     "description": "Bold oil painting — a fierce hermit crab in red and black",
     "images": [
       {
@@ -75,13 +75,13 @@
     ]
   },
   {
-    "title": "Chalk Friends",
-    "date": "2026-04",
-    "description": "Two smiling chalk figures standing under swirling skies",
+    "title": "Clock & Turtle",
+    "date": "2025-12-09",
+    "description": "Handmade clock craft with a cute clay turtle",
     "images": [
       {
-        "file": "2026-04-14_Yoga黑板画.jpg",
-        "caption": "Two big chalk friends — one in cool blue stripes, the other in playful pink — grinning under wild swirling skies with tiny flowers floating between them"
+        "file": "2025-12-9yoga.jpg",
+        "caption": "A purple clock with numbers and a green clay turtle"
       }
     ]
   }

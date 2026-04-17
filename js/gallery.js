@@ -22,6 +22,18 @@
   function getCaption(img) { return typeof img === "string" ? ""  : (img.caption || ""); }
   function imgSrc(img)     { return IMAGE_BASE + getFile(img); }
 
+  function formatDate(dateStr) {
+    // "2026-04-14" → "Apr 14, 2026"
+    const parts = dateStr.split("-");
+    const y = parts[0];
+    const m = parts[1] ? parseInt(parts[1], 10) : null;
+    const d = parts[2] ? parseInt(parts[2], 10) : null;
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    if (m && d) return months[m - 1] + " " + d + ", " + y;
+    if (m)      return months[m - 1] + " " + y;
+    return y;
+  }
+
   // ---- Init ----
   async function init() {
     try {
@@ -92,7 +104,7 @@
       meta.className = "card-meta";
 
       const dateSpan = document.createElement("span");
-      dateSpan.textContent = series.date;
+      dateSpan.textContent = formatDate(series.date);
 
       const descSpan = document.createElement("span");
       descSpan.textContent = series.description || "";
