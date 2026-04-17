@@ -32,7 +32,7 @@ body {
 
 /* ===== Timeline Gallery ===== */
 .gallery {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem 3rem;
 }
@@ -40,25 +40,40 @@ body {
 /* -- Month group -- */
 .timeline-group {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 0 2rem;
+  grid-template-columns: 100px 1fr;
+  gap: 0 1.5rem;
   position: relative;
+  padding-bottom: 1.5rem;
 }
 
 /* Vertical line */
 .timeline-group::before {
   content: "";
   position: absolute;
-  left: 120px;
+  left: 100px;
   top: 0;
   bottom: 0;
   width: 2px;
   background: #e8e5e0;
 }
 
-/* Last group: line stops at last card center */
 .timeline-group:last-child::before {
   bottom: 50%;
+}
+
+/* Dot at top of each month group */
+.timeline-group::after {
+  content: "";
+  position: absolute;
+  left: 100px;
+  top: 1.6rem;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .timeline-label {
@@ -66,12 +81,12 @@ body {
   top: 1.5rem;
   align-self: start;
   text-align: right;
-  padding-right: 1.5rem;
-  padding-top: 1rem;
+  padding-right: 1.2rem;
+  padding-top: 0.8rem;
 }
 
 .timeline-month {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #bbb;
   text-transform: uppercase;
@@ -79,19 +94,19 @@ body {
 }
 
 .timeline-year {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: #e0dcd6;
   line-height: 1;
   margin-top: 0.1rem;
 }
 
+/* Cards area — horizontal wrap */
 .timeline-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  padding: 0.5rem 0 2.5rem 2rem;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 0.5rem 0 1rem 1.5rem;
 }
 
 /* ===== Card ===== */
@@ -103,32 +118,11 @@ body {
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
-  max-width: 560px;
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
-}
-
-/* Dot on timeline */
-.card::before {
-  content: "";
-  position: absolute;
-  left: -2rem;
-  top: 1.8rem;
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.card:hover::before {
-  border-color: #999;
-  background: #f0eeeb;
 }
 
 .card > img,
@@ -148,7 +142,7 @@ body {
 /* ===== Card grid — multi-image series ===== */
 .card-grid {
   display: grid;
-  gap: 3px;
+  gap: 2px;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
 }
@@ -185,22 +179,36 @@ body {
 }
 
 .card-info {
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 0.8rem;
 }
 
 .card-info .card-title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #2c2c2c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-info .card-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.3rem;
-  font-size: 0.82rem;
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
   color: #999;
+}
+
+.card-info .card-meta .card-date {
+  flex-shrink: 0;
+}
+
+.card-info .card-meta .card-desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 0.5rem;
 }
 
 /* ===== Empty state ===== */
@@ -334,38 +342,52 @@ body {
 /* ===== Responsive ===== */
 @media (max-width: 700px) {
   .timeline-group {
-    grid-template-columns: 64px 1fr;
-    gap: 0 1rem;
+    grid-template-columns: 56px 1fr;
+    gap: 0 0.8rem;
   }
 
   .timeline-group::before {
-    left: 64px;
+    left: 56px;
   }
 
-  .timeline-label {
-    padding-right: 0.8rem;
-  }
-
-  .timeline-month {
-    font-size: 0.8rem;
-  }
-
-  .timeline-year {
-    font-size: 1.6rem;
-  }
-
-  .timeline-cards {
-    padding-left: 1.2rem;
-  }
-
-  .card::before {
-    left: -1.2rem;
+  .timeline-group::after {
+    left: 56px;
     width: 8px;
     height: 8px;
   }
 
+  .timeline-label {
+    padding-right: 0.6rem;
+  }
+
+  .timeline-month {
+    font-size: 0.75rem;
+  }
+
+  .timeline-year {
+    font-size: 1.4rem;
+  }
+
+  .timeline-cards {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.6rem;
+    padding-left: 1rem;
+  }
+
+  .card-info {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .card-info .card-title {
+    font-size: 0.8rem;
+  }
+
+  .card-info .card-meta {
+    font-size: 0.7rem;
+  }
+
   .gallery {
-    padding: 0.5rem 1rem 2rem;
+    padding: 0.5rem 0.8rem 2rem;
   }
 
   .site-header h1 {

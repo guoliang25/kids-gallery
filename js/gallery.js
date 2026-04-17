@@ -142,9 +142,11 @@
         meta.className = "card-meta";
 
         const dateSpan = document.createElement("span");
+        dateSpan.className = "card-date";
         dateSpan.textContent = formatDate(series.date);
 
         const descSpan = document.createElement("span");
+        descSpan.className = "card-desc";
         descSpan.textContent = series.description || "";
 
         meta.appendChild(dateSpan);
