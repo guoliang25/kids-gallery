@@ -10,12 +10,40 @@ body {
   background: #faf8f5;
   color: #333;
   min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* ===== Header ===== */
 .site-header {
   text-align: center;
   padding: 3rem 1rem 1.5rem;
+  position: relative;
+}
+
+.header-controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ctrl-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #d8cef0;
+  background: #fff;
+  color: #7c5cbf;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  user-select: none;
+  line-height: 1;
 }
 
 .site-header h1 {
@@ -55,7 +83,7 @@ body {
   top: 0;
   bottom: 0;
   width: 1.5px;
-  background: linear-gradient(to bottom, #ddd8d0, #e8e5e0);
+  background: linear-gradient(to bottom, #c4b3e0, #d8cef0);
 }
 
 .timeline-group:first-child::before {
@@ -74,7 +102,7 @@ body {
   top: 1.2rem;
   width: 7px;
   height: 7px;
-  background: #d4cfc7;
+  background: #a78bda;
   border-radius: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -83,7 +111,7 @@ body {
 .timeline-label {
   grid-column: 1;
   position: sticky;
-  top: 0.8rem;
+  top: 3rem;
   align-self: start;
   padding-top: 0.6rem;
   text-align: right;
@@ -94,7 +122,7 @@ body {
 .timeline-month {
   font-size: 0.65rem;
   font-weight: 600;
-  color: #c0b8ac;
+  color: #7c5cbf;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   line-height: 1.2;
@@ -103,7 +131,7 @@ body {
 .timeline-year {
   font-size: 0.72rem;
   font-weight: 400;
-  color: #c8c0b4;
+  color: #9b85d0;
   line-height: 1.2;
   margin-top: 0.3rem;
   font-variant-numeric: tabular-nums;
@@ -321,6 +349,148 @@ body {
   display: none;
 }
 
+/* ===== Month Navigation Bar ===== */
+.month-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 248, 245, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  text-align: center;
+  border-bottom: 1px solid rgba(124, 92, 191, 0.1);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.month-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.month-nav-pill {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  margin: 0 0.2rem;
+  border-radius: 999px;
+  border: 1px solid #d8cef0;
+  background: #fff;
+  color: #7c5cbf;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.month-nav-pill:hover {
+  background: #f0ebfa;
+  border-color: #b8a4e0;
+}
+
+.month-nav-pill.active {
+  background: #7c5cbf;
+  color: #fff;
+  border-color: #7c5cbf;
+}
+
+/* ===== Artwork Tags ===== */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.3rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.tag-chalkboard     { background: #4a5568; }
+.tag-oil-painting   { background: #c53030; }
+.tag-collage        { background: #2b6cb0; }
+.tag-mixed-media    { background: #c05621; }
+.tag-craft          { background: #2f855a; }
+.tag-3d-sculpture   { background: #6b46c1; }
+.tag-drawing        { background: #4c51bf; }
+.tag-clay           { background: #975a16; }
+
+/* ===== Dark Mode ===== */
+body.dark {
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+body.dark .site-header h1 { color: #e8e8e8; }
+body.dark .site-header .subtitle { color: #999; }
+
+body.dark .ctrl-btn {
+  background: #2a2a40;
+  border-color: #4a4a6a;
+  color: #b8a4e0;
+}
+
+body.dark .month-nav {
+  background: rgba(26, 26, 46, 0.95);
+  border-bottom-color: rgba(124, 92, 191, 0.2);
+}
+
+body.dark .month-nav-pill {
+  background: #2a2a40;
+  border-color: #4a4a6a;
+  color: #b8a4e0;
+}
+
+body.dark .month-nav-pill:hover {
+  background: #3a3a55;
+  border-color: #7c5cbf;
+}
+
+body.dark .month-nav-pill.active {
+  background: #7c5cbf;
+  color: #fff;
+  border-color: #7c5cbf;
+}
+
+body.dark .card {
+  background: #24243a;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .card-info .card-title { color: #e8e8e8; }
+body.dark .card-info .card-meta { color: #888; }
+
+body.dark .card > img[data-src],
+body.dark .card-grid img[data-src] { background: #2a2a40; }
+body.dark .card-grid img { background: #2a2a40; }
+
+body.dark .timeline-group::before {
+  background: linear-gradient(to bottom, #4a3a6e, #3a2a5e);
+}
+
+body.dark .timeline-group::after { background: #7c5cbf; }
+body.dark .timeline-month { color: #b8a4e0; }
+body.dark .timeline-year { color: #8a7aaa; }
+
+body.dark .empty-state { color: #666; }
+
+body.dark .site-footer { color: #666; }
+body.dark .site-footer .copyright { color: #777; }
+body.dark .site-footer .copyright-notice { color: #666; }
+
 /* ===== Footer ===== */
 .site-footer {
   text-align: center;
@@ -345,6 +515,15 @@ body {
 
 /* ===== Responsive ===== */
 @media (max-width: 700px) {
+  .month-nav {
+    padding: 0.4rem 0.5rem;
+  }
+
+  .month-nav-pill {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.65rem;
+  }
+
   .gallery {
     padding: 0.5rem 0.6rem 2rem;
   }
@@ -404,6 +583,18 @@ body {
 
   .site-header h1 {
     font-size: 1.5rem;
+  }
+
+  .header-controls {
+    top: 0.6rem;
+    right: 0.5rem;
+    gap: 0.3rem;
+  }
+
+  .ctrl-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
   }
 
   .lightbox-prev { left: 0.3rem; }

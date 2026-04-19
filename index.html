@@ -11,9 +11,15 @@
 <body>
 
   <header class="site-header">
-    <h1>🧑‍🎨 Yoga's Art Gallery</h1>
-    <p class="subtitle">Every piece tells a story</p>
+    <div class="header-controls">
+      <button id="lang-toggle" class="ctrl-btn" title="切换中文">中</button>
+      <button id="theme-toggle" class="ctrl-btn" title="Toggle dark mode">🌙</button>
+    </div>
+    <h1>🧑‍🎨 <span data-i18n="title">Yoga's Art Gallery</span></h1>
+    <p class="subtitle"><span data-i18n="subtitle">Every piece tells a story</span></p>
   </header>
+
+  <nav id="month-nav" class="month-nav"></nav>
 
   <main id="gallery" class="gallery"></main>
 
@@ -30,9 +36,9 @@
   </div>
 
   <footer class="site-footer">
-    <p class="copyright">&copy; 2025&ndash;2026 Yoga. All rights reserved.</p>
-    <p class="copyright-notice">All artworks on this site are original creations and protected by copyright law. Unauthorized reproduction, distribution, or use is strictly prohibited.</p>
-    <p>Made with ❤️</p>
+    <p class="copyright">&copy; 2025&ndash;2026 Yoga. <span data-i18n="rights">All rights reserved.</span></p>
+    <p class="copyright-notice"><span data-i18n="copyright_notice">All artworks on this site are original creations and protected by copyright law. Unauthorized reproduction, distribution, or use is strictly prohibited.</span></p>
+    <p><span data-i18n="made_with">Made with</span> ❤️</p>
   </footer>
 
   <script src="js/gallery.js"></script>

@@ -1,460 +1,621 @@
 [
   {
     "title": "Chalk Friends",
+    "title_zh": "粉笔朋友",
     "date": "2026-04-14",
     "description": "Two smiling chalk figures standing under swirling skies",
+    "description_zh": "两个微笑的粉笔人物站在旋转的天空下",
+    "tags": ["chalkboard"],
     "images": [
       {
         "file": "2026-04-14_Yoga黑板画.jpg",
-        "caption": "Two big chalk friends — one in cool blue stripes, the other in playful pink — grinning under wild swirling skies with tiny flowers floating between them"
+        "caption": "Two big chalk friends — one in cool blue stripes, the other in playful pink — grinning under wild swirling skies with tiny flowers floating between them",
+        "caption_zh": "两个大粉笔朋友——一个穿着酷酷的蓝色条纹，另一个穿着俏皮的粉红色——在狂野的旋转天空下咧嘴笑，小花在他们之间飘浮"
       }
     ]
   },
   {
     "title": "Chalk Board Series",
+    "title_zh": "黑板画系列",
     "date": "2026-04-13",
     "description": "Chalk drawings on blackboard — night scenes and houses",
+    "description_zh": "黑板上的粉笔画——夜景和房子",
+    "tags": ["chalkboard"],
     "images": [
       {
         "file": "2026-4-13-yoga_p1.jpg",
-        "caption": "Vehicles driving through a starry night"
+        "caption": "Vehicles driving through a starry night",
+        "caption_zh": "车辆行驶在星空之下"
       },
       {
         "file": "2026-4-13-yoga_p2.jpg",
-        "caption": "A wild-haired character holding scissors"
+        "caption": "A wild-haired character holding scissors",
+        "caption_zh": "一个头发乱蓬蓬的角色拿着剪刀"
       },
       {
         "file": "2026-4-13-yoga_p3.jpg",
-        "caption": "A big house with a tiny person standing on top"
+        "caption": "A big house with a tiny person standing on top",
+        "caption_zh": "一座大房子，顶上站着一个小人"
       },
       {
         "file": "2026-4-13-yoga_p4.jpg",
-        "caption": "Three buildings side by side — a neighborhood view"
+        "caption": "Three buildings side by side — a neighborhood view",
+        "caption_zh": "三栋建筑并排——邻里风景"
       }
     ]
   },
   {
     "title": "Backpack Collection",
+    "title_zh": "背包系列",
     "date": "2026-04-12",
     "description": "Three creative bags in bold marker strokes",
+    "description_zh": "三个用粗马克笔画的创意包包",
+    "tags": ["drawing"],
     "images": [
       {
         "file": "2026-4-12_yoga_p1.jpg",
-        "caption": "A castle sitting on top of a yellow backpack"
+        "caption": "A castle sitting on top of a yellow backpack",
+        "caption_zh": "一座城堡坐在黄色背包上面"
       },
       {
         "file": "2026-4-12_yoga_p2.jpg",
-        "caption": "A green backpack with cool sunglasses"
+        "caption": "A green backpack with cool sunglasses",
+        "caption_zh": "一个戴着酷酷墨镜的绿色背包"
       },
       {
         "file": "2026-4-12_yoga_p3.jpg",
-        "caption": "A blue suitcase rolling on a crosshatch track"
+        "caption": "A blue suitcase rolling on a crosshatch track",
+        "caption_zh": "一个蓝色行李箱在交叉线轨道上滚动"
       }
     ]
   },
   {
     "title": "Stripy Snake House",
+    "title_zh": "条纹蛇房子",
     "date": "2026-04-12",
     "description": "A striped snake curling around a cozy little house",
+    "description_zh": "一条条纹蛇盘绕在温馨的小房子周围",
+    "tags": ["drawing"],
     "images": [
       {
         "file": "2026-4-12-yoga.jpg",
-        "caption": "A colorful striped snake wrapping around an orange house"
+        "caption": "A colorful striped snake wrapping around an orange house",
+        "caption_zh": "一条彩色条纹蛇缠绕着一座橙色房子"
       }
     ]
   },
   {
     "title": "Hermit Crab",
+    "title_zh": "寄居蟹",
     "date": "2026-01-01",
     "description": "Bold oil painting — a fierce hermit crab in red and black",
+    "description_zh": "大胆的油画——一只凶猛的红黑色寄居蟹",
+    "tags": ["oil painting"],
     "images": [
       {
         "file": "2026-yoga.jpg",
-        "caption": "A fierce red hermit crab in thick oil paint"
+        "caption": "A fierce red hermit crab in thick oil paint",
+        "caption_zh": "一只凶猛的红色寄居蟹，用厚厚的油彩绘成"
       }
     ]
   },
   {
     "title": "Clock & Turtle",
+    "title_zh": "时钟和乌龟",
     "date": "2025-12-09",
     "description": "Handmade clock craft with a cute clay turtle",
+    "description_zh": "手工时钟工艺品，配有可爱的黏土乌龟",
+    "tags": ["craft"],
     "images": [
       {
         "file": "2025-12-9yoga.jpg",
-        "caption": "A purple clock with numbers and a green clay turtle"
+        "caption": "A purple clock with numbers and a green clay turtle",
+        "caption_zh": "一个紫色的时钟带数字和一只绿色黏土乌龟"
       }
     ]
   },
   {
     "title": "Magnifying Glass & Germs",
+    "title_zh": "放大镜和细菌",
     "date": "2025-10-21",
     "description": "Mixed-media collage — a magnifying glass peering at colorful germs",
+    "description_zh": "混合媒材拼贴——放大镜下五颜六色的细菌",
+    "tags": ["collage"],
     "images": [
       {
         "file": "2025-10-21_Yoga_放大镜和细菌.jpg",
-        "caption": "A bold magnifying glass made of cut paper and string, surrounded by clay germs in blue, red, and orange"
+        "caption": "A bold magnifying glass made of cut paper and string, surrounded by clay germs in blue, red, and orange",
+        "caption_zh": "一个用剪纸和绳子做的大胆放大镜，周围是蓝色、红色和橙色的黏土细菌"
       }
     ]
   },
   {
     "title": "Train",
+    "title_zh": "火车",
     "date": "2025-10-27",
     "description": "Colorful paper collage of a train with pom-pom wheels",
+    "description_zh": "彩色纸拼贴的火车，配有绒球车轮",
+    "tags": ["collage"],
     "images": [
       {
         "file": "2025-10-27_yoga火车.jpg",
-        "caption": "A bright red train built from geometric paper shapes and fuzzy pom-poms on a cheerful background"
+        "caption": "A bright red train built from geometric paper shapes and fuzzy pom-poms on a cheerful background",
+        "caption_zh": "一辆鲜红色火车，用几何纸片和毛绒绒绒球搭建，背景欢快明亮"
       }
     ]
   },
   {
     "title": "Rabbit & Zeta",
+    "title_zh": "兔子和泽塔",
     "date": "2025-10-28",
     "description": "Thick oil-paint rabbit with Ultraman sticker friends",
+    "description_zh": "厚油彩兔子和奥特曼贴纸朋友们",
+    "tags": ["oil painting"],
     "images": [
       {
         "file": "2025-10-28_yoga_兔子和泽塔.jpg",
-        "caption": "A grinning white rabbit painted in heavy strokes on a golden yellow background, with tiny Ultraman stickers scattered around"
+        "caption": "A grinning white rabbit painted in heavy strokes on a golden yellow background, with tiny Ultraman stickers scattered around",
+        "caption_zh": "一只咧嘴笑的白兔子用厚重的笔触画在金黄色背景上，周围散落着小奥特曼贴纸"
       }
     ]
   },
   {
     "title": "Claw Machine Arm",
+    "title_zh": "夹机械臂",
     "date": "2025-11-13",
     "description": "Layered paper craft of a claw machine arm",
+    "description_zh": "分层纸工艺的夹娃娃机械臂",
+    "tags": ["collage"],
     "images": [
       {
         "file": "2025-11-13_yoga_夹机械臂.jpg",
-        "caption": "A yellow and green claw machine with buttons and a grabbing arm, built from layered paper and crayon lines"
+        "caption": "A yellow and green claw machine with buttons and a grabbing arm, built from layered paper and crayon lines",
+        "caption_zh": "一台黄绿色夹娃娃机，有按钮和抓取臂，用分层纸和蜡笔线条搭建"
       }
     ]
   },
   {
     "title": "Old Man",
+    "title_zh": "老人",
     "date": "2025-11-25",
     "description": "Two paper-cut elderly figures with clay hair",
+    "description_zh": "两个剪纸老人形象，配有黏土头发",
+    "tags": ["collage"],
     "images": [
       {
         "file": "2025-11-25_Yoga老人.jpg",
-        "caption": "Two round-faced old folks — one in green, one in orange — with spiky white clay hair on a deep red background"
+        "caption": "Two round-faced old folks — one in green, one in orange — with spiky white clay hair on a deep red background",
+        "caption_zh": "两个圆脸老人——一个穿绿色，一个穿橙色——白色黏土头发竖起，深红色背景"
       }
     ]
   },
   {
     "title": "Castle",
+    "title_zh": "城堡",
     "date": "2025-11-27",
     "description": "Arched blue castle skyline with clay decorations",
+    "description_zh": "拱形蓝色城堡天际线，配有黏土装饰",
+    "tags": ["craft"],
     "images": [
       {
         "file": "2025-11-27_Yoga_城堡.jpg",
-        "caption": "Five tall towers drawn in marker on blue arch-shaped paper, decorated with orange clay blobs and tiny details"
+        "caption": "Five tall towers drawn in marker on blue arch-shaped paper, decorated with orange clay blobs and tiny details",
+        "caption_zh": "五座高塔用马克笔画在蓝色拱形纸上，装饰着橙色黏土块和细小细节"
       }
     ]
   },
   {
     "title": "Telephone",
+    "title_zh": "电话传声",
     "date": "2025-12-15",
     "description": "Four-panel telephone story with buttons and drawings",
+    "description_zh": "四格电话传声故事，配有按钮和绘画",
+    "tags": ["collage"],
     "images": [
       {
         "file": "2025-12-15_Yoga_电话传声.jpg",
-        "caption": "A zigzag book telling the story of sound through telephones — with clay buttons, marker drawings, and painted blobs"
+        "caption": "A zigzag book telling the story of sound through telephones — with clay buttons, marker drawings, and painted blobs",
+        "caption_zh": "一本折叠书讲述电话传声的故事——有黏土按钮、马克笔画和颜料斑点"
       }
     ]
   },
   {
     "title": "Gloves",
+    "title_zh": "手套",
     "date": "2025-12-18",
     "description": "Two big gloves on a bubbly turquoise background",
+    "description_zh": "两只大手套在气泡蓝绿色背景上",
+    "tags": ["collage"],
     "images": [
       {
         "file": "2025-12-18_yoga_手套.jpg",
-        "caption": "A red mitten and a magenta glove covered in pom-poms, with chalk bubbles floating all around on turquoise paper"
+        "caption": "A red mitten and a magenta glove covered in pom-poms, with chalk bubbles floating all around on turquoise paper",
+        "caption_zh": "一只红色连指手套和一只洋红色手套上满是绒球，粉笔泡泡在蓝绿色纸上漂浮"
       }
     ]
   },
   {
     "title": "Underwater World",
+    "title_zh": "海底世界",
     "date": "2025-12-20",
     "description": "Underwater scene with sea creatures and rainbow color strips",
+    "description_zh": "海底场景，有海洋生物和彩虹色纸条",
+    "tags": ["collage"],
     "images": [
       {
         "file": "2025-12-20_Yoga_海底世界.jpg",
-        "caption": "Fish and octopuses swimming through wavy blue waters, next to a page of rainbow-colored paper strips"
+        "caption": "Fish and octopuses swimming through wavy blue waters, next to a page of rainbow-colored paper strips",
+        "caption_zh": "鱼和章鱼在波浪蓝色海水中游泳，旁边是一页彩虹色纸条"
       }
     ]
   },
   {
     "title": "Kandinsky Cash Register",
+    "title_zh": "康定斯基的抽象收银机",
     "date": "2025-12-23",
     "description": "Abstract Kandinsky-inspired drawing of a cash register",
+    "description_zh": "康定斯基风格的抽象收银机绘画",
+    "tags": ["drawing"],
     "images": [
       {
         "file": "2025-12-23_Yoga_康定斯基的抽象收银机.jpg",
-        "caption": "Wild overlapping shapes in orange, pink, blue, and brown — an abstract cash register in Kandinsky style"
+        "caption": "Wild overlapping shapes in orange, pink, blue, and brown — an abstract cash register in Kandinsky style",
+        "caption_zh": "橙色、粉色、蓝色和棕色的重叠形状——康定斯基风格的抽象收银机"
       }
     ]
   },
   {
     "title": "Letters",
+    "title_zh": "字母",
     "date": "2025-03-23",
     "description": "Bold letter painting spelling Y-O-G-A on blue-green",
+    "description_zh": "蓝绿色上用粗笔画拼写 Y-O-G-A 字母",
+    "tags": ["drawing"],
     "images": [
       {
         "file": "2025-3-23_yoga_字母.jpg",
-        "caption": "Big white letters spelling \"Yoga\" painted on a swirly blue and green watercolor background"
+        "caption": "Big white letters spelling \"Yoga\" painted on a swirly blue and green watercolor background",
+        "caption_zh": "大白色字母拼写\"Yoga\"，画在蓝绿色水彩漩涡背景上"
       }
     ]
   },
   {
     "title": "Bag",
+    "title_zh": "包",
     "date": "2025-04",
     "description": "A round red handbag craft with rhinestone decorations",
+    "description_zh": "一个圆形红色手提包工艺品，配有水钻装饰",
+    "tags": ["craft"],
     "images": [
       {
         "file": "2025-4_Yoga_包.jpg",
-        "caption": "A big red paper bag decorated with sparkly rhinestones, colorful pockets, and a green handle"
+        "caption": "A big red paper bag decorated with sparkly rhinestones, colorful pockets, and a green handle",
+        "caption_zh": "一个大红纸包，装饰着闪亮水钻、彩色口袋和绿色手柄"
       }
     ]
   },
   {
     "title": "Kid & Ants",
+    "title_zh": "小孩和蚂蚁",
     "date": "2025-04-15",
     "description": "Clay ants in a dirt tunnel surrounded by a brown border",
+    "description_zh": "黏土蚂蚁在泥土隧道中，被棕色边框围绕",
+    "tags": ["clay"],
     "images": [
       {
         "file": "2025-4-15_yoga_小孩和蚂蚁.jpg",
-        "caption": "Three black clay ants with googly eyes hanging out inside a brown dirt ring on yellow paper"
+        "caption": "Three black clay ants with googly eyes hanging out inside a brown dirt ring on yellow paper",
+        "caption_zh": "三只黑色黏土蚂蚁，长着大眼睛，在黄色纸上棕色泥土圈里玩耍"
       }
     ]
   },
   {
     "title": "Car & Maze",
+    "title_zh": "小汽车和迷宫",
     "date": "2025-06-29",
     "description": "Energetic swirls of a car and maze in mixed media",
+    "description_zh": "混合媒材中充满活力的汽车和迷宫旋涡",
+    "tags": ["mixed media"],
     "images": [
       {
         "file": "2025-6-29_Yoga_小汽车和迷宫.jpg",
-        "caption": "A wild tangle of black lines, red spirals, and blue splashes — a car racing through a maze"
+        "caption": "A wild tangle of black lines, red spirals, and blue splashes — a car racing through a maze",
+        "caption_zh": "黑色线条、红色螺旋和蓝色飞溅的狂野纠缠——一辆车在迷宫中飞驰"
       }
     ]
   },
   {
     "title": "Ladybug",
+    "title_zh": "瓢虫",
     "date": "2025-06-09",
     "description": "Bold paint-splat ladybugs and creatures",
+    "description_zh": "大胆的颜料泼溅瓢虫和小动物",
+    "tags": ["clay"],
     "images": [
       {
         "file": "2025-6-9_yoga_瓢虫.jpg",
-        "caption": "Playful ladybugs and animal shapes in thick yellow, black, and green paint splats on white"
+        "caption": "Playful ladybugs and animal shapes in thick yellow, black, and green paint splats on white",
+        "caption_zh": "俏皮的瓢虫和动物造型，用厚厚的黄色、黑色和绿色颜料在白色上泼溅"
       }
     ]
   },
   {
     "title": "Princess Meishan",
+    "title_zh": "美善公主",
     "date": "2025-11-06",
     "description": "Collage princess scene with rhinestone jewelry chains",
+    "description_zh": "拼贴公主场景，配有水钻首饰链",
+    "tags": ["collage"],
     "images": [
       {
         "file": "2025-11-6__Yoga_美善公主.jpg",
-        "caption": "Three colorful figures made of layered paper and clay, connected by sparkling blue rhinestone chains on a red background"
+        "caption": "Three colorful figures made of layered paper and clay, connected by sparkling blue rhinestone chains on a red background",
+        "caption_zh": "三个彩色人物由层叠纸和黏土制成，用闪闪发光的蓝色水钻链连接在红色背景上"
       }
     ]
   },
   {
     "title": "Night Machines",
+    "title_zh": "夜晚的机器",
     "date": "2026-04-15",
     "description": "Chalk drawings on blackboard — vehicles and ships in the dark",
+    "description_zh": "黑板上的粉笔画——黑暗中的车辆和船只",
+    "tags": ["chalkboard"],
     "images": [
       {
         "file": "2026-04-15_yoga_p1.jpg",
-        "caption": "Spaceships and boats glowing in the dark"
+        "caption": "Spaceships and boats glowing in the dark",
+        "caption_zh": "飞船和船只在黑暗中发光"
       },
       {
         "file": "2026-04-15_yoga_p2.jpg",
-        "caption": "A long chalk car cruising under flowers and magnets"
+        "caption": "A long chalk car cruising under flowers and magnets",
+        "caption_zh": "一辆长长的粉笔车在花朵和磁铁下行驶"
       }
     ]
   },
   {
     "title": "Space",
+    "title_zh": "太空",
     "date": "2026-01-13",
     "description": "Dramatic abstract oil painting of outer space",
+    "description_zh": "戏剧性的抽象太空油画",
+    "tags": ["oil painting"],
     "images": [
       {
         "file": "2026-1-13_yoga_太空.jpg",
-        "caption": "A dark swirling mass of black and brown paint with fiery red splashes — a bold vision of deep space"
+        "caption": "A dark swirling mass of black and brown paint with fiery red splashes — a bold vision of deep space",
+        "caption_zh": "黑色和棕色颜料的旋涡，配有火红色飞溅——深空的大胆画面"
       }
     ]
   },
   {
     "title": "Pipes",
+    "title_zh": "水管",
     "date": "2026-01-15",
     "description": "3D cardboard pipe sculpture with colorful clay and paper",
+    "description_zh": "3D纸板管道雕塑，配有彩色黏土和纸",
+    "tags": ["3D sculpture"],
     "images": [
       {
         "file": "2026-1-15_Yoga_水管_p1.jpg",
-        "caption": "A cardboard base covered with clay blobs, paper arrows, and tangled string pipes — the front view"
+        "caption": "A cardboard base covered with clay blobs, paper arrows, and tangled string pipes — the front view",
+        "caption_zh": "纸板底座上覆盖着黏土块、纸箭头和缠绕的绳子管道——正面视角"
       },
       {
         "file": "2026-1-15_Yoga_水管_p2.jpg",
-        "caption": "More colorful clay flowers and paper arrows connected by orange string — the back view"
+        "caption": "More colorful clay flowers and paper arrows connected by orange string — the back view",
+        "caption_zh": "更多彩色黏土花和纸箭头用橙色绳子连接——背面视角"
       }
     ]
   },
   {
     "title": "Hedgehog House",
+    "title_zh": "刺猬房",
     "date": "2026-01-22",
     "description": "3D cardboard hedgehog house with clay, sticks, shells, and a fence",
+    "description_zh": "3D纸板刺猬房，配有黏土、树枝、贝壳和围栏",
+    "tags": ["3D sculpture"],
     "images": [
       {
         "file": "2026-1-22_Yoga刺猬房_p1.jpg",
-        "caption": "Top-down view of the hedgehog house — colorful sticks, clay bushes, and painted shells on cardboard"
+        "caption": "Top-down view of the hedgehog house — colorful sticks, clay bushes, and painted shells on cardboard",
+        "caption_zh": "刺猬房俯视图——彩色树枝、黏土灌木和纸板上的彩绘贝壳"
       },
       {
         "file": "2026-1-22_Yoga刺猬房_p2.jpg",
-        "caption": "Front view — a cardboard box house with a window, yellow fence, and seashell garden"
+        "caption": "Front view — a cardboard box house with a window, yellow fence, and seashell garden",
+        "caption_zh": "正面视角——纸板箱房子有窗户、黄色围栏和贝壳花园"
       },
       {
         "file": "2026-1-22_Yoga刺猬房_p3.jpg",
-        "caption": "Side angle showing the striped roof, clay trees, and rainbow shells around the house"
+        "caption": "Side angle showing the striped roof, clay trees, and rainbow shells around the house",
+        "caption_zh": "侧面角度展示条纹屋顶、黏土树和房子周围的彩虹贝壳"
       },
       {
         "file": "2026-1-22_Yoga刺猬房_p4.jpg",
-        "caption": "Back view — green door, colorful blocks, and painted shells lining the yard"
+        "caption": "Back view — green door, colorful blocks, and painted shells lining the yard",
+        "caption_zh": "背面视角——绿色门、彩色积木和院子里排列的彩绘贝壳"
       },
       {
         "file": "2026-1-22_Yoga刺猬房_p5.jpg",
-        "caption": "Another angle showing the full house with sticks poking out like hedgehog spines"
+        "caption": "Another angle showing the full house with sticks poking out like hedgehog spines",
+        "caption_zh": "另一个角度展示整座房子，树枝像刺猬的刺一样伸出"
       }
     ]
   },
   {
     "title": "Base",
+    "title_zh": "基地",
     "date": "2026-01-08",
     "description": "Mixed-media base with clay figures, drawing, and pom-poms",
+    "description_zh": "混合媒材基地，配有黏土人物、绘画和绒球",
+    "tags": ["3D sculpture"],
     "images": [
       {
         "file": "2026-1-8_Yoga_基地_p1.jpg",
-        "caption": "A tall spiral tower drawn in blue pencil, surrounded by colorful pom-pom planets and clay creatures"
+        "caption": "A tall spiral tower drawn in blue pencil, surrounded by colorful pom-pom planets and clay creatures",
+        "caption_zh": "一座用蓝色铅笔画的螺旋高塔，周围是彩色绒球星球和黏土生物"
       },
       {
         "file": "2026-1-8_Yoga_基地_p2.jpg",
-        "caption": "Clay figures and pom-poms scattered across a canvas with blue pencil lines and a painted heart"
+        "caption": "Clay figures and pom-poms scattered across a canvas with blue pencil lines and a painted heart",
+        "caption_zh": "黏土人物和绒球散布在画布上，配有蓝色铅笔线条和一颗画的心"
       }
     ]
   },
   {
     "title": "Watermelon House",
+    "title_zh": "西瓜房",
     "date": "2026-02-17",
     "description": "Crayon and oil pastel drawing of a watermelon-shaped house",
+    "description_zh": "蜡笔和油画棒画的西瓜形状房子",
+    "tags": ["drawing"],
     "images": [
       {
         "file": "2026-2-17_Yoga_西瓜房.jpg",
-        "caption": "A big watermelon slice towering over a red and blue neighborhood, drawn in bold crayon strokes"
+        "caption": "A big watermelon slice towering over a red and blue neighborhood, drawn in bold crayon strokes",
+        "caption_zh": "一大片西瓜高耸在红蓝社区上方，用粗蜡笔画成"
       }
     ]
   },
   {
     "title": "Nian Beast",
+    "title_zh": "年兽",
     "date": "2026-02-26",
     "description": "Fierce Nian beast in thick paint and pom-pom mixed media",
+    "description_zh": "凶猛的年兽，厚颜料和绒球混合媒材",
+    "tags": ["mixed media"],
     "images": [
       {
         "file": "2026-2-26_Yoga__年兽.jpg",
-        "caption": "A wild orange and black Nian beast with pom-pom eyes, surrounded by gems and sparkles on a pink background"
+        "caption": "A wild orange and black Nian beast with pom-pom eyes, surrounded by gems and sparkles on a pink background",
+        "caption_zh": "一只狂野的橙黑色年兽，绒球眼睛，粉色背景上围绕着宝石和闪光"
       }
     ]
   },
   {
     "title": "Basquiat-Style Boat",
+    "title_zh": "巴斯奎特风格的船",
     "date": "2026-02-05",
     "description": "Bold Basquiat-inspired painting — a jungle boat scene",
+    "description_zh": "大胆的巴斯奎特风格画作——丛林船只场景",
+    "tags": ["oil painting"],
     "images": [
       {
         "file": "2026-2-5_Yoga__巴斯奎特风格的船_p1.jpg",
-        "caption": "A dense tropical scene in thick oil paint — dark trees, bright green cactus, and colorful clay shapes"
+        "caption": "A dense tropical scene in thick oil paint — dark trees, bright green cactus, and colorful clay shapes",
+        "caption_zh": "厚油彩中的茂密热带场景——深色树木、明亮绿色仙人掌和彩色黏土造型"
       },
       {
         "file": "2026-2-5_Yoga__巴斯奎特风格的船_p2.jpg",
-        "caption": "Colorful clay boats lined up on a painted surface — blue, pink, red, and green"
+        "caption": "Colorful clay boats lined up on a painted surface — blue, pink, red, and green",
+        "caption_zh": "彩色黏土船在画面上排列——蓝色、粉色、红色和绿色"
       }
     ]
   },
   {
     "title": "Boat",
+    "title_zh": "船",
     "date": "2026-03-10",
     "description": "Vibrant yellow painting of a boat with bold pink and black lines",
+    "description_zh": "鲜艳的黄色船只画作，配有大胆的粉色和黑色线条",
+    "tags": ["oil painting"],
     "images": [
       {
         "file": "2026-3-10_yoga_船.jpg",
-        "caption": "A lively boat scene buzzing with music notes, giraffes, and swirling patterns on a bright yellow background"
+        "caption": "A lively boat scene buzzing with music notes, giraffes, and swirling patterns on a bright yellow background",
+        "caption_zh": "一个热闹的船只场景，充满音符、长颈鹿和漩涡图案，明亮黄色背景"
       }
     ]
   },
   {
     "title": "Sock Shop",
+    "title_zh": "袜子店",
     "date": "2026-03-12",
     "description": "Expressive oil painting of a sock shop storefront",
+    "description_zh": "表现力丰富的袜子店门面油画",
+    "tags": ["oil painting"],
     "images": [
       {
         "file": "2026-3-12_Yoga袜子店.jpg",
-        "caption": "A busy yellow and green sock shop with bold brushstrokes, red flowers, and a stormy blue-green sky"
+        "caption": "A busy yellow and green sock shop with bold brushstrokes, red flowers, and a stormy blue-green sky",
+        "caption_zh": "一家繁忙的黄绿色袜子店，粗犷笔触、红色花朵和暴风蓝绿色天空"
       }
     ]
   },
   {
     "title": "Earthworm",
+    "title_zh": "蚯蚓",
     "date": "2026-03-17",
     "description": "Layered painting of an earthworm burrowing underground",
+    "description_zh": "蚯蚓在地下钻洞的分层画作",
+    "tags": ["oil painting"],
     "images": [
       {
         "file": "2026-3-17_yoga_蚯蚓.jpg",
-        "caption": "A yellow earthworm curling through purple and brown earth under a dramatic red sky"
+        "caption": "A yellow earthworm curling through purple and brown earth under a dramatic red sky",
+        "caption_zh": "一条黄色蚯蚓在紫色和棕色土壤中蜿蜒，上方是戏剧性的红色天空"
       }
     ]
   },
   {
     "title": "Squirrel House 2",
+    "title_zh": "松鼠的房子 2",
     "date": "2026-03-24",
     "description": "Playful painting of squirrels living in a colorful treehouse",
+    "description_zh": "松鼠住在彩色树屋里的俏皮画作",
+    "tags": ["mixed media"],
     "images": [
       {
         "file": "2026-3-24_yoga_松鼠的房子_2.jpg",
-        "caption": "Brown squirrels climbing around a green house decorated with numbers, dots, and a Christmas tree on top"
+        "caption": "Brown squirrels climbing around a green house decorated with numbers, dots, and a Christmas tree on top",
+        "caption_zh": "棕色松鼠爬在绿色房子周围，装饰着数字、圆点和顶上的圣诞树"
       }
     ]
   },
   {
     "title": "Kitchen",
+    "title_zh": "厨房",
     "date": "2026-03-31",
     "description": "Mixed-media kitchen with clay vegetables on a painted canvas",
+    "description_zh": "混合媒材厨房，画布上有黏土蔬菜",
+    "tags": ["oil painting"],
     "images": [
       {
         "file": "2026-3-31_yoga厨房.jpg",
-        "caption": "A pink and green kitchen scene with clay peas, garlic, and a big green leaf on swirly painted background"
+        "caption": "A pink and green kitchen scene with clay peas, garlic, and a big green leaf on swirly painted background",
+        "caption_zh": "粉绿色厨房场景，有黏土豌豆、大蒜和一片大绿叶在漩涡颜料背景上"
       }
     ]
   },
   {
     "title": "Sea Castle",
+    "title_zh": "海上城堡",
     "date": "2026-03-05",
     "description": "Oil painting of a pink figure standing by a stormy sea castle",
+    "description_zh": "一个粉色人物站在暴风海上城堡旁的油画",
+    "tags": ["oil painting"],
     "images": [
       {
         "file": "2026-3-5_yoga_海上城堡.jpg",
-        "caption": "A little pink clay person with button eyes standing on a dark rocky hill by the sea"
+        "caption": "A little pink clay person with button eyes standing on a dark rocky hill by the sea",
+        "caption_zh": "一个小粉色黏土人，有纽扣眼睛，站在海边的深色岩石山丘上"
       }
     ]
   },
   {
     "title": "Kid & Ants 2",
+    "title_zh": "小孩和蚂蚁 2",
     "date": "2025-04-15",
     "description": "A smiling kid visiting the ants in their tunnel",
+    "description_zh": "一个微笑的小孩去蚂蚁的隧道探访",
+    "tags": ["clay"],
     "images": [
       {
         "file": "2025-4-15_yoga_小孩和蚂蚁2.jpg",
-        "caption": "A paper-cut kid with a big smile peeking into the brown dirt ring where two clay ants live"
+        "caption": "A paper-cut kid with a big smile peeking into the brown dirt ring where two clay ants live",
+        "caption_zh": "一个笑容满面的剪纸小孩探头看棕色泥土圈里住着的两只黏土蚂蚁"
       }
     ]
   }
