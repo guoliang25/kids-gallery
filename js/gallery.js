@@ -305,23 +305,41 @@
     allNode.addEventListener("click", function () { setFilter("month", null); });
     track.appendChild(allNode);
 
+    // Group months by year for compact display
+    var lastYear = null;
     monthKeys.forEach(function (key, i) {
-      // line
+      var p = parseMonthKey(key);
+
+      // Year divider
+      if (p.year !== lastYear) {
+        if (i > 0) {
+          var spacer = document.createElement("div");
+          spacer.className = "tl-year-gap";
+          track.appendChild(spacer);
+        }
+        var yearLabel = document.createElement("div");
+        yearLabel.className = "tl-year-label";
+        yearLabel.textContent = p.year;
+        track.appendChild(yearLabel);
+        lastYear = p.year;
+      }
+
+      // line segment
       var line = document.createElement("div");
       line.className = "tl-line";
       track.appendChild(line);
-      // node
+
+      // month node (show only short month name, no year)
       var node = document.createElement("div");
       node.className = "tl-node" + (filterState.month === key ? " active" : "");
       node.dataset.month = key;
-      node.innerHTML = '<div class="tl-dot"></div><div class="tl-label">' + monthLabel(key) + '</div>';
+      node.innerHTML = '<div class="tl-dot"></div><div class="tl-label">' + p.month + '</div>';
       node.addEventListener("click", function () {
         setFilter("month", filterState.month === key ? null : key);
       });
       track.appendChild(node);
     });
 
-    // Drag to scroll
     enableDragScroll(timelineNav);
   }
 
@@ -383,8 +401,8 @@
       word.className = "cc-word" + (filterState.content === c ? " active" : "");
       word.textContent = t(c);
       word.dataset.content = c;
-      // Font size: 0.7rem to 1.4rem
-      var size = 0.7 + 0.7 * ((counts[c] - minC) / range);
+      // Font size: 0.72rem to 1.05rem (subtle variation)
+      var size = 0.72 + 0.33 * ((counts[c] - minC) / range);
       word.style.fontSize = size.toFixed(2) + "rem";
       word.addEventListener("click", function () {
         setFilter("content", filterState.content === c ? null : c);
