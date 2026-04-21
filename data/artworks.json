@@ -864,5 +864,26 @@
     "content": [
       "animal"
     ]
+  },
+  {
+    "title": "Starry Night House",
+    "title_zh": "星夜房屋",
+    "date": "2026-04-21",
+    "description": "Bold marker drawing of a dark house under a starry night with a blue and yellow tree",
+    "description_zh": "粗马克笔画的一座深色房屋，矗立在繁星夜空下，旁边是一棵蓝黄色的树",
+    "tags": [
+      "drawing"
+    ],
+    "images": [
+      {
+        "file": "2026-4-21_Yoga_房屋.jpg",
+        "caption": "A scribble-filled black house with a purple roof and a glowing yellow window, flanked by a blue-and-yellow tree, under bright yellow stars and falling dark raindrops, with a long black ground and a blue-yellow striped river below",
+        "caption_zh": "一座用黑色粗线填满的房子，紫色屋顶上一扇发光的黄色小窗，旁边立着一棵蓝黄相间的大树，天上挂着亮黄色的星星和飘落的黑色雨点，前方是一条长长的黑色地面和蓝黄条纹的河"
+      }
+    ],
+    "content": [
+      "house",
+      "nature"
+    ]
   }
 ]
